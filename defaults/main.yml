@@ -29,6 +29,7 @@ haproxy_script_location: "/usr/local/bin"
 # optional
 artifact_store: ""
 checkpoint: "true"
+marathon_mesos_role: ""
 
 marathon_additional_configs: []
 #    For example:

@@ -30,6 +30,14 @@
   template: src=zk.j2 dest=/etc/marathon/conf/zk
   when: marathon_zookeeper_state != ""
 
+- name: Remove optional --mesos_role option
+  file: path=/etc/marathon/conf/mesos_role state=absent
+  when: marathon_mesos_role == ""
+
+- name: Set optional --mesos_role option
+  template: src=mesos_role.j2 dest=/etc/marathon/conf/mesos_role
+  when: marathon_mesos_role != ""
+
 - name: Set --hostname option
   template: src=hostname.j2 dest=/etc/marathon/conf/hostname
 
