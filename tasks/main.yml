@@ -20,7 +20,7 @@
   tags:
     - haproxy
 
-- name: Start Marathon service
-  service: name=marathon state=restarted enabled=yes
+- name: Enable Marathon service
+  service: name=marathon enabled=yes
   tags:
-    - restart
+    - service
