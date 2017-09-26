@@ -1,13 +1,15 @@
 ---
 marathon_version: "1.3.6"
 
+marathon_repo_host: repos.mesosphere.com
+
 # Debian: Mesosphere apt repository URL
 marathon_apt_package: "marathon={{ marathon_version }}-*"
-marathon_apt_repo: "deb http://repos.mesosphere.com/{{ansible_distribution|lower}} {{ansible_distribution_release|lower}} main"
+marathon_apt_repo: "deb http://{{marathon_repo_host}}/{{ansible_distribution|lower}} {{ansible_distribution_release|lower}} main"
 
 # RedHat: Mesosphere yum repository URL
 marathon_yum_package: "marathon-{{ marathon_version }}"
-mesosphere_yum_repo: "http://repos.mesosphere.com/el/{{ os_version_major }}/noarch/RPMS/{{ mesosphere_releases[os_version_major] }}"
+mesosphere_yum_repo: "http://{{ marathon_repo_host }}/el/{{ os_version_major }}/noarch/RPMS/{{ mesosphere_releases[os_version_major] }}"
 
 marathon_hostname: "{{ inventory_hostname }}"
 marathon_port: 8080
