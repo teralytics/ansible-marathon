@@ -46,6 +46,7 @@ mesos_ssl_support_downgrade: false
 artifact_store: ""
 checkpoint: "true"
 marathon_mesos_role: ""
+marathon_logging_level: ""
 
 marathon_additional_configs: []
 #    For example:

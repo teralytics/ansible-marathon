@@ -72,6 +72,8 @@ mesos_ssl_cert_file: # When mesos SSL is enabled this must be used to point to t
 artifact_store: ""
 checkpoint: "true"
 marathon_mesos_role: ""
+# off, fatal, error, warn, info (default), debug, trace, all.
+marathon_logging_level: ""
 
 marathon_additional_configs: []
 #    For example:
