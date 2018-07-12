@@ -8,6 +8,9 @@ marathon_package_version: "1.0.540"
 marathon_os_distribution: "{{ ansible_distribution | lower }}"
 marathon_os_version: "{{ ansible_distribution_version.split('.') | join('') }}"
 marathon_apt_url: "http://{{ marathon_repo_host }}/{{ ansible_distribution | lower }}"
+marathon_apt_key_id: 'E56151BF'
+marathon_apt_key_server: 'keyserver.ubuntu.com'
+marathon_apt_key_url: 
 marathon_package_full_version: "{{ marathon_version }}-{{ marathon_package_version }}.{{ marathon_os_distribution }}{{ marathon_os_version }}"
 marathon_apt_package: "marathon={{ marathon_package_full_version }}"
 

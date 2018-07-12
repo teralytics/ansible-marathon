@@ -32,6 +32,10 @@ marathon_version: "1.3.6"
 # Debian: Mesosphere apt repository URL
 marathon_apt_package: "marathon={{ marathon_version }}-*"
 marathon_apt_repo: "deb http://repos.mesosphere.com/{{ansible_distribution|lower}} {{ansible_distribution_release|lower}} main"
+marathon_apt_key_id: 'E56151BF'
+marathon_apt_key_server: 'keyserver.ubuntu.com'
+# undefined if using key server; if set, will override adding key from key_server above
+marathon_apt_key_url:
 # Debian apt pin priority for the marathon package. If empty (the default), no pin priority is used.
 marathon_apt_pin_priority:
 
